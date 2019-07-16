@@ -12,6 +12,7 @@ def get_all_RDS_instances():
     rds = boto3.client('rds')
     response = rds.describe_db_instances()
 
+
 #populate my_instances
     for x in response['DBInstances']:
         my_instances.append(Instances(
@@ -34,6 +35,12 @@ def list_user_choices():
         index +=1
 
     inp = input("Choose the instance you wish to connect to: ")
+
+    
+
+def connect_to_RDS(input, instances):
+
+    
 
 
 # Start of program
